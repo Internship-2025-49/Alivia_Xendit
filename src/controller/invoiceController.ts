@@ -10,7 +10,9 @@ const xenditInvoiceClient = new InvoiceClient({ secretKey: API_KEY });
 
 export async function createInvoice(c: Context) {
   try {
+    console.log("Request masuk ke createInvoice");
     const invoiceData = await c.req.json();
+    console.log("Data yang diterima:", invoiceData);
     const invoice = await xenditInvoiceClient.createInvoice({
       data: invoiceData,
     });
