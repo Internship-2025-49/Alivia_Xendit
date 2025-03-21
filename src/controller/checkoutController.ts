@@ -13,14 +13,14 @@ export async function createInvoice() {
     const { data, status } = await axios.post(
       "https://api.xendit.co/v2/invoices",
       {
-        external_id: "xendit_test_id_1",
-        amount: 20000,
+        external_id: "xendit_test123",
+        amount: 25000,
         currency: "IDR",
         customer: {
-          given_names: "Ahmad",
-          surname: "Gunawan",
-          email: "ahmad_gunawan@example.com",
-          mobile_number: "+6287774441111",
+          given_names: "Alivia",
+          surname: "Pertiwi",
+          email: "alivian@example.com",
+          mobile_number: "+6283159608712",
         },
         customer_notification_preference: {
           invoice_paid: ["email", "whatsapp"],
@@ -29,7 +29,7 @@ export async function createInvoice() {
         failure_redirect_url: "example.com/failure",
         items: [
           {
-            name: "Double Cheeseburger",
+            name: "Eskrim cone",
             quantity: 2,
             price: 7000,
             category: "Fast Food",
@@ -38,7 +38,7 @@ export async function createInvoice() {
             name: "Chocolate Sundae",
             quantity: 1,
             price: 3000,
-            category: "Fast Food",
+            category: "dessert",
           },
         ],
         fees: [
